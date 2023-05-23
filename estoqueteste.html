@@ -1,0 +1,40 @@
+<script>
+    saldo = parseInt(prompt("Informar saldo inicial"));
+    document.write("Saldo Inicial: " + saldo + "<br>");
+    encerrar = "n";
+
+    function incrementarSaldo(qtd) {
+        saldo = saldo + qtd;
+        document.write("Entrada: " + quantidade + "<br>");
+    }
+
+    function decrementarSaldo(qtd) {
+        if (saldo >= qtd) {
+            saldo = saldo - qtd;
+            document.write("Saída: " + qtd + "<br>");
+        } else {
+            document.write("Saldo insuficiente" + "<br>");
+            alert("Saldo insuficiente");
+        }
+    }
+
+
+
+    while (encerrar == "n") {
+        tipo = parseInt(prompt("Informar tipo de entrada"));
+        quantidade = parseInt(prompt("Informar quantidade"));
+
+        if (tipo == 1) {
+            incrementarSaldo(quantidade)
+        }
+
+        if (tipo == 2) {
+            decrementarSaldo(quantidade)
+
+        }
+        document.write("Saldo: " + saldo + "<br>");
+        encerrar = prompt("Deseja encerrar ? (s/n)");
+    }
+
+    document.write("Sistema encerrado" + "<br>");
+</script>
